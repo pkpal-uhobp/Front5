@@ -141,7 +141,7 @@ const handleCopy = async (colorValue) => {
     notification.value = `Copied ${colorValue} to clipboard!`;
     setTimeout(() => {
       notification.value = '';
-    }, 100);
+    }, 2500);
   }
 };
 
@@ -160,7 +160,7 @@ const showNotification = (message) => {
   notification.value = message;
   setTimeout(() => {
     notification.value = '';
-  }, 100);
+  }, 2500);
 };
 </script>
 

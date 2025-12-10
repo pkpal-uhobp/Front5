@@ -73,10 +73,12 @@ export function rgbToHsl(r, g, b) {
     const d = max - min;
     s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
     
+    // Calculate hue based on which color channel is dominant
+    // Values 6, 2, 4 represent positions on the color wheel (red, green, blue)
     switch (max) {
-      case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
-      case g: h = ((b - r) / d + 2) / 6; break;
-      case b: h = ((r - g) / d + 4) / 6; break;
+      case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break; // Red dominant
+      case g: h = ((b - r) / d + 2) / 6; break; // Green dominant
+      case b: h = ((r - g) / d + 4) / 6; break; // Blue dominant
     }
   }
   

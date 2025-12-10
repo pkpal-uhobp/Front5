@@ -98,7 +98,7 @@ const handleCopy = async (colorValue) => {
     notification.value = `Copied ${colorValue} to clipboard!`;
     setTimeout(() => {
       notification.value = '';
-    }, 100);
+    }, 2500);
   }
 };
 
